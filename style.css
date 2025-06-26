@@ -346,7 +346,7 @@ main {
 .eContain {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
+  gap: 2em;
   max-width: 1090px;
   margin: 0 auto;
 }
@@ -364,11 +364,12 @@ main {
 .time {
   display: flex;
   flex-direction: column;
+  gap: 1em
 }
 
 .minCont2 {
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
 }
 
 .dash, 
@@ -400,10 +401,32 @@ main {
 }
 
 .reporting {
-  padding: 0em 0em;
+  padding: 2em 2em;
+  padding-bottom: 4em;
   gap: 0em;
+  align-items: unset;
 }
 
+.reporting h1 {
+  color: white;
+  font-size: 2.5rem;
+  line-height: 2.9375rem;
+  font-weight: var(--fw-light);
+
 }
+
+.img__container {
+    padding-bottom: 2.5em;
+}
+
+.content1 {
+  margin-block-start: 1em;
+}
+
+.minCont2 {
+align-items: flex-start;
+}
+}
+
 
 
