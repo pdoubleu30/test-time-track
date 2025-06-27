@@ -364,7 +364,7 @@ main {
 .time {
   display: flex;
   flex-direction: column;
-  gap: 1em
+  gap: 1em;
 }
 
 .minCont2 {
@@ -379,12 +379,6 @@ main {
 .content4,
 .content5,
 .content6,
-.brief,
-.remote,
-.book,
-.stickFig,
-.bubble,
-.heart,
 .next1,
 .next2,
 .next3,
@@ -392,6 +386,7 @@ main {
 .next5,
 .next6 {
   max-width: 255px;
+  max-height: 244px;
   margin-block-start: 0em;
 }
 
@@ -402,7 +397,7 @@ main {
 
 .reporting {
   padding: 2em 2em;
-  padding-bottom: 4em;
+  padding-bottom: 6em;
   gap: 0em;
   align-items: unset;
 }
@@ -425,7 +420,90 @@ main {
 
 .minCont2 {
 align-items: flex-start;
+gap: 1em;
 }
+
+.minCont1 {
+    padding-bottom: 2em;
+}
+
+.hours {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+}
+
+.content1 {
+  padding: unset;
+  margin: unset;
+  margin-top: 2.8em;
+  max-height: 199px;
+}
+
+.content2 {
+  padding: unset;
+  margin: unset;
+  margin-top: 2.8em;
+  max-height: 199px;
+}
+.content3 {
+  padding: unset;
+  margin: unset;
+  margin-top: 2.8em;
+    max-height: 199px;
+}
+
+.content4 {
+  padding: unset;
+  margin: unset;
+  margin-top: 2.8em;
+    max-height: 199px;
+}
+
+.content5 {
+  padding: unset;
+  margin: unset;
+  margin-top: 2.8em;
+  max-height: 199px;
+}
+
+.content6 {
+  padding: unset;
+  margin: unset;
+  margin-top: 2.19em;
+  max-height: 199px;
+}
+
+.dashTop {
+  max-height: 520px;
+}
+
+* logos */
+.brief {
+  padding-inline-start: unsetk;
+  
+  
+}
+
+.remote {
+  
+}
+
+.book {
+ 
+}
+
+.stickFig {
+  
+}
+
+.bubble {
+  
+}
+
+.heart {
+}
+
+
 }
 
 
