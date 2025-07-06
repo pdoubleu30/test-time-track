@@ -18,8 +18,16 @@ const renderData = (timeframe) => {
         const myPara1 = document.createElement("p");
         const myPara2 = document.createElement("p");
 
-        myPara1.textContent = `${current}`;
-        myPara2.textContnt = `Yesterday + '' + '-' +${previous}`;
+        if (timeframe === 'daily') {
+            myPara1.textContent = `${current}hrs`;
+            myPara2.textContnt = `Yesterday + '' + '-' +${previous}hrs`;
+        } else if(timeframe === 'weekly') {
+            myPara1.textContent = `${current}hrs`;
+            myPara2.textContnt = `Last + '' + Week + '' + '-' +${previous}hrs`;
+        } else {
+            myPara1.textContent = `${current}hrs`;
+            myPara2.textContnt = `Last + '' + Month + '' + '-' +${previous}hrs`;
+        }
 
         /*
         myPara1.textContent = activity.timeframes.daily.current;
