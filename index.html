@@ -11,176 +11,98 @@
 </head>
 <body>
   <main>
-      <div class = "eContain">
-        <div class = "dashTop">
-          <div class = "reporting">
-            <div class = "img__container">
-              <img class = "jeremy" src="images/image-jeremy.png" alt = "jeremy profile pic">
-            </div>
-            <div class = "info">
-              <p>Report for</p>
-              <h1>Jeremy Robson</h1>
-            </div>
+    <div class ="totalTrack">
+      <div class ="jerm__contain">
+        <div class="personal">
+          <div class="jerm__img" >
+            <img class="jerm" src="/images/image-jeremy.png" alt="jeremy profile pic" />
           </div>
-          <div class = "time" >
-            <p>Daily</p>
-            <p>Weekly</p>
-            <p>Monthly</p>
+          <div class="jerm__info">
+            <p class="rF">Report for</p>
+            <p class="jR">Jeremy Robson</p>
           </div>
         </div>
-        <div class = "dash next1">
-          <div class = "lImg">
-            <img class = "brief" src="images/icon-work.svg " alt="briefcase"/>
-          </div>
-          <div class="content1">
-            <div class="minCont1">
-              <p>Work</p>
-              <img class = "dots" src="images/icon-ellipsis.svg" alt="dots" />
-            </div>
-            <div class="minCont2">
-              <p class ="hours">32hrs</p>
-              <p class= "hoursTime">Last Week - 36hrs</p>
-            </div>
-          </div>
+        <div class="time__contain">
+          <button data-timeframe="daily" class="timeframe-button" id="daily">Daily</button>
+          <button data-timeframe="weekly" class="timeframe-button" id="weekly">Weekly</button>
+          <button  data-timeframe="monthly" class="timeframe-button" id="monthly">Monthly</button>
         </div>
-        
-        <div class = "dash next2">
-          <div class = "lImg" >
-            <img class= "remote" src="images/icon-play.svg" alt="remote control"/>
+      </div>
+      <div class="work__Contain allContain">
+        <div class="work__inner allContain2">
+          <div class="activity__top">
+            <p class="activity">Work</p>
+            <img src="images/icon-ellipsis.svg" alt="dots"/>
           </div>
-          <div class="content2">
-            <div class="minCont1">
-              <p>Play</p>
-              <img class = "dots" src="images/icon-ellipsis.svg" alt="dots" />
-            </div>
-            <div class="minCont2">
-              <p class ="hours">10hrs</p>
-              <p class= "hoursTime">Last Week - 36hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class = "dash next3">
-          <div class = "lImg">
-            <img class= "book" src="images/icon-study.svg" alt="book" />
-          </div>
-          <div class="content3">
-            <div class="minCont1">
-              <p>Study</p>
-              <img class = "dots" src="images/icon-ellipsis.svg" alt="dots" />
-            </div>
-            <div class="minCont2">
-              <p class ="hours">4hrs</p>
-              <p class= "hoursTime">Last Week - 7hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class = "dash next4">
-          <div class = "lImg">
-            <img class = "stickFig" src="images/icon-exercise.svg" alt="stick figure" />
-          </div>
-          <div class="content4">
-            <div class="minCont1">
-              <p>Exercise</p>
-              <img class = "dots" src="images/icon-ellipsis.svg" alt="dots" />
-            </div>
-            <div class="minCont2">
-              <p class ="hours">4hrs</p>
-              <p class= "hoursTime">Last Week - 5hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class = "dash next5">
-          <div class = "lImg" alt ="speech bubble">
-            <img class = "bubble" src="images/icon-social.svg" alt ="speech bubble"/>
-          </div>
-          <div class="content5">
-            <div class="minCont1">
-              <p>Social</p>
-              <img class = "dots" src="images/icon-ellipsis.svg" alt="dots" />
-            </div>
-            <div class="minCont2">
-              <p class ="hours">5hrs</p>
-              <p class= "hoursTime">Last Week - 10hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class = "dash next6">
-          <div class = "lImg" alt = "heart">
-            <img class = "heart" src="images/icon-self-care.svg" alt = "heart">/>
-          </div>
-          <div class="content6">
-            <div class="minCont1">
-              <p>Self Care</p>
-              <img class = "dots" src="images/icon-ellipsis.svg" alt="dots" />
-            </div>
-            <div class="minCont2">
-              <p class ="hours">2hrs</p>
-              <p class= "hoursTime">Last Week - 2hrs</p>
-            </div>
+          <div class="updateTime" data-activity="Work">
+            <h1 id="current" class="hours">32hrs</h1>
+            <p class="prior"></p>
           </div>
         </div>
       </div>
-
-  <!---  
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs 
-  Previous - 7hrs 
-  32hrs 
-  Previous - 36hrs 
-  103hrs 
-  Previous - 128hrs 
-
-  Play
-  1hr 
-  Previous - 2hrs 
-  10hrs 
-  Previous - 8hrs 
-  23hrs 
-  Previous - 29hrs 
-
-  Study
-  0hrs 
-  Previous - 1hr 
-  4hrs 
-  Previous - 7hrs 
-  13hrs 
-  Previous - 19hrs 
-
-  Exercise
-  1hr 
-  Previous - 1hr 
-  4hrs 
-  Previous - 5hrs 
-  11hrs 
-  Previous - 18hrs 
-
-  Social
-  1hr 
-  Previous - 3hrs 
-  5hrs 
-  Previous - 10hrs 
-  21hrs 
-  Previous - 23hrs 
-
-  Self Care
-  0hrs 
-  Previous - 1hr 
-  2hrs 
-  Previous - 2hrs 
-  7hrs 
-  Previous - 11hrs 
-  -->
-
-
+      <div class="play__Contain allContain">
+        <div class="play__inner allContain2">
+          <div class="activity__top">
+            <p class="activity">Play</p>
+            <img src="images/icon-ellipsis.svg" alt="dots"/>
+          </div>
+          <div class="updateTime" data-activity="Play">
+            <h1 id="current" class="hours">10hrs</h1>
+            <p class="prior">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="read__Contain allContain">
+        <div class="read__inner allContain2">
+          <div class="activity__top">
+            <p class="activity">Study</p>
+            <img src="images/icon-ellipsis.svg" alt="dots"/>
+          </div>
+          <div class="updateTime" data-activity="Study">
+            <h1 id="current" class="hours">4hrs</h1>
+            <p class="prior">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise__Contain allContain">
+        <div class="exercise__inner allContain2">
+          <div class="activity__top">
+            <p class="activity">Exercise</p>
+            <img src="images/icon-ellipsis.svg" alt="dots"/>
+          </div>
+          <div class="updateTime" data-activity="Exercise">
+            <h1 id="current" class="hours">4hrs</h1>
+            <p class="prior">Last Week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat__Contain allContain">
+        <div class="chat__inner allContain2">
+          <div class="activity__top">
+            <p class="activity">Social</p>
+            <img src="images/icon-ellipsis.svg" alt="dots"/>
+          </div>
+          <div class="updateTime" data-activity="Social">
+            <h1 id="current"  class="hours">5hrs</h1>
+            <p class="prior">Last Week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="health__Contain allContain">
+        <div class="health__inner allContain2">
+          <div class="activity__top">
+            <p class="activity">Self Care</p>
+            <img src="images/icon-ellipsis.svg" alt="dots"/>
+          </div>
+          <div class="updateTime" data-activity="Self Care">
+            <h1 id="current" class="hours">2hrs</h1>
+            <p class="prior">Last Week - 2hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
   
   </main>
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
