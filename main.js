@@ -1,51 +1,82 @@
-//testing
+
+const fetchJson = async () => {
+  try {
+    let response = await fetch('/data.json');
+    if (!response.ok) {
+      throw new Error('Oops! Something went wrong.');
+    }
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.log(error);
+    console.log('Error fetching or parsing JSON');
+    //returning null or an empty object/array in case of error
+    return null;
+  }
+
+};
 
 
-const renderData = (timeframe) => {
-    const section = document.getElementById('updateTime');
-    section.innerHTML = ''; //clears prior content
-    const activity = obj;
+// Get all elements with the class 'updateTime'
+const containers = document.querySelectorAll('.updateTime'); 
 
-    activity.forEach(item =>{
-        const title = item.title;
-        const timeframes = item.timeframes;
-        const current = timeframes[timeframe].current;
-        const previous = timeframes[timeframe].previous;
-    
+const renderCards = async (timeframe) => {
+    const fetchedData = await fetchJson(); 
 
-/*
-    for (const act of activity) { */
-        const myPara1 = document.createElement("p");
-        const myPara2 = document.createElement("p");
+    if (fetchedData) { // Check if data was fetched successfully
+  
+        containers.forEach(container => {  /*Iterate through each container */ 
+        
+        const activity = container.dataset.activity;
+        const relevantAct= fetchedData.find(item => item.title === activity);
 
-        if (timeframe === 'daily') {
-            myPara1.textContent = `${current}hrs`;
-            myPara2.textContnt = `Yesterday + '' + '-' +${previous}hrs`;
-        } else if(timeframe === 'weekly') {
-            myPara1.textContent = `${current}hrs`;
-            myPara2.textContnt = `Last + '' + Week + '' + '-' +${previous}hrs`;
-        } else {
-            myPara1.textContent = `${current}hrs`;
-            myPara2.textContnt = `Last + '' + Month + '' + '-' +${previous}hrs`;
-        }
+        container.innerHTML = ''; //Clear existing content for each container
+          
+         if (relevantAct && timeframe ==='daily') {
+          const card = document.createElement('div');
+                card.className = 'card';
+                const current = relevantAct.timeframes[timeframe].current;
+                const previous = relevantAct.timeframes[timeframe].previous;
+                card.innerHTML = `
+                    <p class="hours">${current}hrs</p>
+                    <p class="prior">Yesterday - ${previous}hrs</p>
+                `;
+                container.appendChild(card); 
+         } else if (relevantAct && timeframe ==='weekly') {
+          const card = document.createElement('div');
+                card.className = 'card';
+                const current = relevantAct.timeframes[timeframe].current;
+                const previous = relevantAct.timeframes[timeframe].previous;
+                card.innerHTML = `
+                    <p class="hours">${current}hrs</p>
+                    <p class="prior">Last Week - ${previous}hrs</p>
+                `;
+                container.appendChild(card); 
+         } else if (relevantAct && timeframe ==='monthly') {
+          const card = document.createElement('div');
+                card.className = 'card';
+                const current = relevantAct.timeframes[timeframe].current;
+                const previous = relevantAct.timeframes[timeframe].previous;
+                card.innerHTML = `
+                    <p class="hours">${current}hrs</p>
+                    <p class="prior">Last Month - ${previous}hrs</p>
+                `;
+                container.appendChild(card); 
+         };
 
-        /*
-        myPara1.textContent = activity.timeframes.daily.current;
-        myPara2.textContent = `Yesterday +'' +'-' +${activity.timeframes.daily.previous}`;
-        */
+        });
+    }
+};
 
-
-    section.appendChild(myPara1);
-    section.appendChild(myPara2);
+const buttons = document.querySelectorAll('.timeframe-button');
+buttons.forEach(button => {
+  button.addEventListener('click', (e) =>{
+    const timeframe = e.target.dataset.timeframe;
+    renderCards(timeframe);
+  })
 });
-}
 
-document.querySelectorAll('#buttons button').forEach(button => {
-    button.addEventListener('click', () => {
-        const timeframe = button.id;
-        renderData(timeframe);
-    });
-});
+fetchJson();
+renderCards('daily');
 
-//inital load with data
-renderData('weekly');
